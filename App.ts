@@ -1,4 +1,4 @@
 import { createAppContainer } from "react-navigation";
-import { RouterApp } from "./app/router";
+import { RouterApp } from "./src/router";
 
 export default createAppContainer(RouterApp);
