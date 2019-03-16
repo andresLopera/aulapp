@@ -17,9 +17,8 @@ export class AuthScreen extends React.Component {
 
   // Fetch the token from storageå then navigate to our appropriate place
   _bootstrapAsync = async () => {
-    AsyncStorage.setItem( AppConst.TOKEN_KEY, 'andresLopera 1')
     const userToken = await AsyncStorage.getItem(AppConst.TOKEN_KEY)
-    alert(userToken)
+    this.props.navigation.navigate( userToken ? 'Home': 'Login');
     // This will switch to the App screen or Auth screen and this loading
     // screen will be unmounted and thrown away.
     //this.props.navigation.navigate(userToken ? 'Home' : 'Login');
