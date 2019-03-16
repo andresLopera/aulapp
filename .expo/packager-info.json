@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 64597,
+  "expoServerNgrokUrl": "https://aa-rn9.anonymous.aulapp.exp.direct",
+  "packagerNgrokUrl": "https://packager.aa-rn9.anonymous.aulapp.exp.direct",
+  "ngrokPid": 64617,
   "webpackServerPort": null
 }
