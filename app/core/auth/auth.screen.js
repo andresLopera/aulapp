@@ -1,6 +1,7 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { AsyncStorage, StyleSheet, View, Text } from "react-native";
 import AuthService from './authService';
+import AppConst from '../../common/config/constants';
 
 export class AuthScreen extends React.Component {
 
@@ -16,13 +17,9 @@ export class AuthScreen extends React.Component {
 
   // Fetch the token from storageå then navigate to our appropriate place
   _bootstrapAsync = async () => {
-    const userToken = '1';
-    this.authService.setToken('andres')
-
-    this.authService.getToken( (token) => {
-      alert(token)
-    });
-
+    AsyncStorage.setItem( AppConst.TOKEN_KEY, 'andresLopera 1')
+    const userToken = await AsyncStorage.getItem(AppConst.TOKEN_KEY)
+    alert(userToken)
     // This will switch to the App screen or Auth screen and this loading
     // screen will be unmounted and thrown away.
     //this.props.navigation.navigate(userToken ? 'Home' : 'Login');
