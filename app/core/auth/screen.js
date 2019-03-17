@@ -16,20 +16,13 @@ class AuthScreen extends React.Component {
     super();
   }
 
-
-  logIn = () => {
-    alert('logIn Press')
-    this.props.saveUserToken('ANDRES LOPERA TOKEN');
-  }
-
   componentDidMount() {
     this._bootstrapAsync();
   }
 
   _bootstrapAsync = async () => {
     this.props.getUserToken().then(() => {
-      //this.props.navigation.navigate('Auth')
-      //this.props.navigation.navigate(this.props.token !== null ? 'App' : 'Auth')
+      this.props.navigation.navigate(this.props.token !== null ? 'Auth' : 'Auth')
     })
       .catch(error => {
         this.props.navigation.navigate('Auth')
@@ -42,9 +35,7 @@ class AuthScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <ActivityIndicator animating={true} color={Colors.red800} />
-        <StatusBar barStyle="default" />
-        <Button title="Login" onPress={this.logIn}/>
+        <ActivityIndicator animating={true} color={Colors.primary} />
       </View>
     );
   }
@@ -55,8 +46,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getUserToken: () => dispatch(getUserToken()),
-  saveUserToken:(token) => dispatch(saveUserToken(token))
+  getUserToken: () => dispatch(getUserToken())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AuthScreen);

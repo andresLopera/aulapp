@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text } from "react-native";
 import styles from './style';
+import { Button, Paragraph } from 'react-native-paper';
 
 export class OnBoardScreen extends React.Component {
 
@@ -16,17 +17,11 @@ export class OnBoardScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Comunicación escolar</Text>
-        <Text>sin complicaciones</Text>
-        <Text>Iniciar Sesión</Text>
-        <Button
-          title="Via Email"
-          onPress={this.viaEmail}
-        />
-        <Button
-          title="Manual"
-          onPress={this.manual}
-        />
+        <Text style={styles.title}>Comunicación escolar</Text>
+        <Text style={styles.paragraph}>sin complicaciones</Text>
+        <Text style={styles.subtitle}>Iniciar Sesión</Text>
+        <Button color="white" style={[styles.btn, styles.btnInverse]} mode="contained" uppercase={false} onPress={this.viaEmail}>Via Email</Button>
+        <Button style={[styles.btn, styles.btnAccent]} mode="contained" uppercase={false} onPress={this.manual}>Manual</Button>
       </View>
     );
   }

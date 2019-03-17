@@ -6,9 +6,20 @@ import { OnBoardScreen } from './core/onboard/screen';
 
 const AppStack = createStackNavigator({ Home: HomeScreen });
 const AuthStack = createStackNavigator({
-  OnBoard: OnBoardScreen,
-  ManualSignIn: SignManualScreen
-},{
+  OnBoard: {
+    screen: OnBoardScreen,
+    navigationOptions: {
+      gesturesEnabled: false,
+      header: null
+    }
+  },
+  ManualSignIn: {
+    screen: SignManualScreen,
+    navigationOptions: {
+      gesturesEnabled: false,
+      header: null
+    }
+  },
   initialRouteName: 'OnBoard'
 });
 

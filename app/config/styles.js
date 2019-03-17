@@ -1,6 +1,7 @@
 const AppStyles = {
     colors: {
-        accentColor: '#0084ff',
+        primary: '#2A6de2',
+        accentColor: '#1546b7',
         inactiveGreyColor: '#626262',
         lightGreyCOlor: '#7f8c8d',
         separator: '#bdc3c7',
@@ -9,7 +10,8 @@ const AppStyles = {
         grey: 'grey',
         green: 'green',
         onlineGreen: '#2ecc71',
-        lightWhite: '#f9f9f9'
+        lightWhite: '#f9f9f9',
+        white10: 'rgba(255,255,255, 0.80)'
     },
     fonts: {
         FONT_REGULAR: 'Roboto-Regular',
