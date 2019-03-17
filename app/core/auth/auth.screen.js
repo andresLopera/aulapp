@@ -21,7 +21,7 @@ export class AuthScreen extends React.Component {
     this.props.navigation.dispatch(StackActions.reset({
       index: 0,
       actions: [
-        NavigationActions.navigate({ routeName: routeName })
+        NavigationActions.navigate({ routeName: 'OnBoard' })
       ],
     }))
 

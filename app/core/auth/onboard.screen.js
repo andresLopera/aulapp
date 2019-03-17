@@ -1,13 +1,26 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Button } from "react-native";
 
 export class OnBoardScreen extends React.Component {
+
+  onViaEmail = () => {
+    alert('via Email')
+  }
+
+  onManual = () => {
+    alert('Manual')
+  }
 
   // Render any loading content that you like here
   render() {
     return (
       <View style={styles.container}>
-         <Text>OnBoard Screen</Text>
+         <Text>Comunicación escolar</Text>
+         <Text>sin complicaciones</Text>
+         <Text>Iniciar sessión</Text>
+         <Button title="Via Email" onPress={this.onViaEmail}
+         />
+         <Button title="Manual" onPress={this.onManual} />
       </View>
     );
   }
