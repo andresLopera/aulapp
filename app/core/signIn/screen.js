@@ -2,11 +2,11 @@ import React from "react";
 import { View, Text, Button } from "react-native";
 import { StackActions, NavigationActions } from "react-navigation";
 
-export class LoginScreen extends React.Component {
+export class SignScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Login Screen</Text>
+        <Text>SignIn Screen</Text>
         <Button
           title="Go to Home"
           onPress={() => {
