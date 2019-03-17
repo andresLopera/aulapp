@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  ActivityIndicator,
   StatusBar,
   Button,
   View,
 } from "react-native";
 import styles from './style';
+import { ActivityIndicator, Colors } from 'react-native-paper';
 
 import { connect } from 'react-redux';
 import { getUserToken, saveUserToken } from './actions';
@@ -28,7 +28,7 @@ class AuthScreen extends React.Component {
 
   _bootstrapAsync = async () => {
     this.props.getUserToken().then(() => {
-        this.props.navigation.navigate('Auth')
+      //this.props.navigation.navigate('Auth')
       //this.props.navigation.navigate(this.props.token !== null ? 'App' : 'Auth')
     })
       .catch(error => {
@@ -42,7 +42,7 @@ class AuthScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <ActivityIndicator />
+        <ActivityIndicator animating={true} color={Colors.red800} />
         <StatusBar barStyle="default" />
         <Button title="Login" onPress={this.logIn}/>
       </View>
