@@ -1,14 +1,12 @@
 import React from "react";
 import {
-  StatusBar,
-  Button,
   View,
 } from "react-native";
 import styles from './style';
 import { ActivityIndicator, Colors } from 'react-native-paper';
 
 import { connect } from 'react-redux';
-import { getUserToken, saveUserToken } from './actions';
+import { getUserToken } from './actions';
 
 class AuthScreen extends React.Component {
 

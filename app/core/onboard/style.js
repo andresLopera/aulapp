@@ -3,6 +3,7 @@ import AppStyles from '../../config/styles';
 
 export default styles = StyleSheet.create({
     container: {
+      fontFamily: 'montserrat-regular',
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
@@ -10,11 +11,13 @@ export default styles = StyleSheet.create({
       backgroundColor: AppStyles.colors.primary
     },
     title: {
+      fontFamily: 'montserrat-bold',
       color: 'white',
-      fontSize: 20,
+      fontSize: 25,
       fontWeight: 'bold'
     },
     paragraph: {
+      fontFamily: 'montserrat-regular',
       color: 'white',
       fontSize: 20
     },
